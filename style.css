@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fading-background {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) calc(100vh - 350px),
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("./media/beach.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh; /* Adjust based on your requirement */
+}
+
+.profile {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 80px;
+  width: 100%;
+  padding: 48px;
+  gap: 16px;
+  border: 5px blue solid;
+}
+
+.profile-picture,
+.profile-text,
+.social-media {
+  display: flex;
+  flex: 1;
+  border: 5px solid green;
+}
+
+.profile-picture-img {
+  max-height: 160px;
+  border-radius: 50%;
+}
+
+.profile-text {
+  min-height: auto;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: left;
+  gap: 16px;
+}
+
+.profile-text-name,
+.profile-text-first-name {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.profile-text-attributes {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.social-media {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: end;
+  gap: 8px;
+}
+
+.social-media-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+a.social-media-btn {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    top: 80px;
+    height: auto;
+  }
+  .profile-picture,
+  .profile-text,
+  .social-media {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-media {
+    align-items: start;
+  }
+  .profile-text-attributes {
+    margin-top: 0;
+  }
+}
+
+.section {
+  height: 250px;
+  background-color: rgba(255, 255, 255, 1);
+}
