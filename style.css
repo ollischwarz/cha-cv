@@ -1,77 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  display: block;
+  background-color: rgba(9, 24, 93, 1);
+  font-family: "Roboto", sans-serif;
+  color: aliceblue;
+}
+
 .fading-background {
+  position: relative;
+  z-index: 1;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0) 0%,
+      rgba(232, 244, 255, 0.2) 0%,
       rgba(255, 255, 255, 0) calc(100vh - 350px),
-      rgba(255, 255, 255, 1) 100%
+      rgba(9, 24, 93, 1) 100%
     ),
     url("./media/beach.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh; /* Adjust based on your requirement */
+  min-width: 100%;
+  height: 100vh;
 }
 
 .profile {
   position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translate(0, -50%);
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  bottom: 80px;
-  width: 100%;
+  align-items: center;
+
+  min-width: 100%;
+  height: 80%;
   padding: 48px;
-  gap: 16px;
-  border: 5px blue solid;
+  gap: 32px;
+  border: 5px green solid;
 }
 
 .profile-picture,
-.profile-text,
-.social-media {
+.profile-info,
+.profile-social {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
-  border: 5px solid green;
+  min-width: 100%;
+  height: auto;
+  padding: 0;
+  border: 5px blue solid;
 }
 
-.profile-picture-img {
-  max-height: 160px;
+.profile-picture img {
+  max-width: 155px;
+  height: auto;
   border-radius: 50%;
+  border: 4px aquamarine solid;
 }
 
-.profile-text {
-  min-height: auto;
+.profile-info {
   flex-direction: column;
-  /* justify-content: space-between; */
-  align-items: left;
-  gap: 16px;
+  gap: 8px;
 }
 
-.profile-text-name,
-.profile-text-first-name {
+.profile-info__name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 32px;
   font-weight: 700;
+
+  min-width: 100%;
+  border: 5px yellow solid;
 }
 
-.profile-text-attributes {
+.profile-info__attributes {
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  gap: 16px;
-  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-width: 100%;
+  border: 5px yellow solid;
 }
 
-.social-media {
-  height: auto;
+.profile-social {
   display: flex;
   flex-direction: row;
-  justify-content: right;
-  align-items: end;
+  justify-content: center;
+  align-items: start;
   gap: 8px;
 }
 
@@ -79,40 +106,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
-  width: 32px;
+  
+  line-height: 0;
+  font-size: 32px;
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
-  background-color: rgb(134, 144, 134);
+  background-color: rgb(178, 215, 255);
+  color: rgba(45, 100, 255, 1);
 }
 
 a.social-media-btn {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .profile {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    top: 80px;
-    height: auto;
-  }
-  .profile-picture,
-  .profile-text,
-  .social-media {
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  .social-media {
-    align-items: start;
-  }
-  .profile-text-attributes {
-    margin-top: 0;
-  }
-}
-
-.section {
-  height: 250px;
-  background-color: rgba(255, 255, 255, 1);
+.info-block {
+  height: 300px;
 }
