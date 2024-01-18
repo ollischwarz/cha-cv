@@ -6,15 +6,30 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   display: block;
   background-color: rgba(9, 24, 93, 1);
   font-family: "Roboto", sans-serif;
   color: aliceblue;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
-.fading-background {
-  position: relative;
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* .fading-background {
+  position: absolute;
   z-index: 1;
   background-image: linear-gradient(
       to bottom,
@@ -28,27 +43,41 @@ body {
   background-repeat: no-repeat;
   min-width: 100%;
   height: 100vh;
-}
+  border: 8px yellow solid;
+} */
 
 .section {
-  margin: 0 48px;
+  margin: 24px;
   min-height: 150px;
-  /* border: 5px red solid; */
+  border: 5px green solid;
 }
 
 .profile {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translate(0, -50%);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(232, 244, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) calc(100vh - 350px),
+      rgba(9, 24, 93, 1) 100%
+    ),
+    url("./media/beach.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100vh;
+
+  /* z-index: 2; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* transform: translate(0, -50%); */
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  min-width: calc(100% - 96px);
-  height: 80vh;
+  height: auto;
+  margin: 0;
   padding: 48px;
   gap: 32px;
 }
@@ -96,7 +125,6 @@ body {
   gap: 8px;
   font-size: 26;
   font-weight: 300;
-
   min-width: 100%;
   /* border: 5px yellow solid; */
 }
@@ -129,11 +157,9 @@ a.social-media-btn {
 
 .intro-text {
   display: block;
-  margin-top: 48px;
   min-height: auto;
   font-size: 28px;
   font-weight: 500;
-  line-height: 1.5;
 }
 
 .info-block {
@@ -144,28 +170,69 @@ a.social-media-btn {
   background-color: rgb(45, 58, 96);
   border-radius: 16px;
   gap: 48px;
-  margin-top: 48px;
 }
 
-.info-element {
+.info-block__element {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.info-parameter {
+.info-block__parameter {
   font-size: 18px;
   font-weight: 300;
 }
 
-.info-argument {
+.info-block__argument {
   font-size: 24px;
   font-weight: 500;
 }
 
 .profile-description {
   min-height: auto;
-  margin-top: 48px;
-  line-height: 1.5;
   font-weight: 300;
+}
+
+.scroll-effect {
+  position: relative;
+  overflow: scroll;
+  z-index: 10;
+
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.scroll-effect__background {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-effect__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll-effect__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.scroll-effect__content > * {
+  border: 8px yellow solid;
 }
