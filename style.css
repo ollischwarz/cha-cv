@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -173,10 +173,18 @@ a.social-media-btn {
   gap: 48px;
 }
 
+#info-block-one,
+#info-block-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 48px;
+}
+
 .info-block__element {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2px;
 }
 
 .info-block__parameter {
@@ -199,6 +207,7 @@ a.social-media-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   position: relative;
 
@@ -236,15 +245,21 @@ a.social-media-btn {
 .scroll-effect__content > * {
   max-width: 700px;
   height: auto;
-  flex:1;
+  flex: 1;
   padding: 28px;
 
   background-color: rgba(0, 15, 30, 0.4);
   backdrop-filter: blur(44px);
 }
 
+#zitat {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
 #zitat .zitat-svg {
-  /* width: 100%; */
+  width: 100%;
 }
 
 #zitat .zitat-svg svg {
@@ -254,6 +269,111 @@ a.social-media-btn {
   display: block;
 }
 
+.zitat-author {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.zitat-author > img {
+  max-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.zitat-author > p {
+  font-size: 24px;
+}
+
 .scroll-effect__content > * {
   border: 8px yellow solid;
+}
+
+#education > * {
+  border-bottom: rgba(255,255,255,0.1) solid 1px;
+  padding: 24px 0;
+}
+
+#education-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 0 8px 0;
+  gap: 16px;
+}
+
+#education-header p {
+font-size: large;
+}
+
+.education-icon {
+  font-size: larger;
+}
+
+.education-step {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.education-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 8px;
+
+  font-size: small;
+  font-weight: 100;
+}
+
+.education-title p {
+font-size: larger;
+font-weight: 500;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: top;
+
+  margin: 96px 24px;
+  padding-bottom: 48px;
+}
+
+#Contact {
+  margin-right: auto;
+}
+
+#Contact,
+#Social {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+#Contact > p,
+#Social > p {
+  font-weight: 700;
+}
+
+#Phone,
+#Email,
+#Address,
+#LinkedIn,
+#Instagram {
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+
+  font-size: medium;
+}
+
+.footer-icon {
+  color: rgba(255, 255, 255, 1);
 }
