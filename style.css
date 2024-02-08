@@ -321,7 +321,7 @@ a.social-media-btn {
   align-items: center;
   background-color: rgb(248, 248, 248);
   margin: 0;
-  padding: 24px;
+  padding: 24px 0;
   box-sizing: border-box;
   gap: 16px;
 }
@@ -335,12 +335,14 @@ a.social-media-btn {
 
 .skills-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 600px;
+  width: 80%; 
+  max-width: 600px; 
   overflow-x: auto;
   gap: 20px;
-  padding-bottom: 20px;
+  padding: 0 24px 24px 24px; 
+  box-sizing: border-box; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skill-logo {
