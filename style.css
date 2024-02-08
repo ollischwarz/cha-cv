@@ -28,28 +28,27 @@ svg {
   display: block;
 }
 
-/* .fading-background {
-  position: absolute;
-  z-index: 1;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(232, 244, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) calc(100vh - 350px),
-      rgba(9, 24, 93, 1) 100%
-    ),
-    url("./media/beach.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-width: 100%;
-  height: 100vh;
-  border: 8px yellow solid;
-} */
-
 .section {
   margin: 24px;
   min-height: 150px;
-  /* border: 5px green solid; */
+}
+
+#content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 48px 0;
+}
+
+.intro-text,
+.info-block,
+.profile-description {
+  max-width: 850px;
+  width: auto;
+
+  padding: 0 24px;
 }
 
 .profile {
@@ -167,6 +166,7 @@ a.social-media-btn {
   display: flex;
   flex-direction: column;
   justify-content: left;
+
   padding: 48px 24px;
   background-color: #ffffff0d;
   border-radius: 16px;
@@ -222,6 +222,7 @@ a.social-media-btn {
   align-items: stretch;
   gap: 24px;
   padding: 0 24px;
+  margin: 48px 0;
 }
 
 .scroll-effect__content > * {
@@ -321,43 +322,37 @@ a.social-media-btn {
   align-items: center;
   background-color: rgb(248, 248, 248);
   margin: 0;
-  padding: 24px 0;
+  padding: 24px;
   box-sizing: border-box;
-  gap: 16px;
+  gap: 48px;
 }
 
 #skills > p {
-  font-size: large;
+  font-size: larger;
   font-weight: 700;
   text-align: center;
   color: #000000;
+
+  margin-top: 48px;
 }
 
 .skills-container {
   display: flex;
-  width: 80%; 
-  max-width: 600px; 
-  overflow-x: auto;
-  gap: 20px;
-  padding: 0 24px 24px 24px; 
-  box-sizing: border-box; 
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  overflow-x: scroll;
+  gap: 40px;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 48px;
 }
 
 .skill-logo {
-  flex: 0 0 auto; 
-  max-height: 80px; 
+  flex: 0 0 auto;
+  max-height: 80px;
   height: auto;
-}
-
-.skills-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.skills-container::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  border-radius: 4px;
 }
 
 footer {
@@ -417,6 +412,10 @@ footer {
   .education-title p {
     font-size: medium;
     font-weight: 500;
+  }
+  .skills-container {
+    gap: 20px;
+    justify-content: left;
   }
   footer {
     flex-direction: column;
