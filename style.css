@@ -61,7 +61,7 @@ svg {
     ),
     url("./media/beach.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   width: 100%;
   min-height: 80vh;
