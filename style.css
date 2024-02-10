@@ -45,8 +45,7 @@ svg {
 
 .intro-text,
 .info-block,
-.profile-description,
-.portfolio {
+.profile-description {
   max-width: 850px;
   width: auto;
 
@@ -169,7 +168,8 @@ a.social-media-btn {
 }
 
 #info-block-one,
-#info-block-two {
+#info-block-two,
+#info-block-three {
   display: flex;
   flex: 1;
   flex-direction: row;
@@ -178,7 +178,8 @@ a.social-media-btn {
 }
 
 #info-block-one > *,
-#info-block-two > * {
+#info-block-two > *,
+#info-block-three > * {
   flex: 1;
 }
 
@@ -197,6 +198,18 @@ a.social-media-btn {
 .info-block__argument {
   font-size: 18px;
   font-weight: 500;
+}
+
+#info-block-three .info-block__argument {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#info-block-three .info-block__argument > * {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 
 .profile-description {
@@ -363,6 +376,69 @@ a.social-media-btn {
   height: auto;
 }
 
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  max-width: 850px;
+  width: 100%;
+
+  padding: 0 24px;
+}
+
+#content-container-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+#content-container-2 > p{
+  font-size: larger;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+
+  margin-top: 48px;
+}
+
+#light-pollution,
+#dream-destination {
+  background-image: url("./media/light-pollution.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+}
+
+#dream-destination {
+  background-image: url("./media/dream-destination.jpg")
+}
+
+.portfolio-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 0;
+  font-size: 48px;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 1);
+}
+
+a.portfolio-btn {
+  text-decoration: none;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -437,5 +513,8 @@ footer {
   .skills-container {
     gap: 20px;
     justify-content: left;
+  }
+  .portfolio {
+    flex-direction: column;
   }
 }
