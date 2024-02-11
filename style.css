@@ -454,7 +454,7 @@ footer {
   max-width: 850px;
   width: 100%;
 
-  padding: 48px 24px;
+  padding: 48px 24px 96px 24px;
   gap: 16px;
 }
 
